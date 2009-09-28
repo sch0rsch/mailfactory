@@ -7,7 +7,7 @@ spec = Gem::Specification.new do |s|
     s.version = MailFactory::VERSION
     s.platform = Gem::Platform::RUBY
     s.summary = "MailFactory is a pure-ruby MIME mail generator"
-    s.description = "MailFactory is s simple module for producing RFC compliant mail that can include multiple attachments, multiple body parts, and arbitrary headers"
+    s.description = "MailFactory is a simple module for producing RFC compliant mail that can include multiple attachments, multiple body parts, and arbitrary headers"
     s.files = Dir.glob("./lib/*").delete_if {|item| item.include?("~")}
     s.files << Dir.glob("./tests/*").delete_if {|item| item.include?("~")}
     s.require_path = 'lib'

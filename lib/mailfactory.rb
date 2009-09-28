@@ -27,6 +27,7 @@
 #   }
 
 require 'pathname'
+require 'time'
 
 # try to bring in the mime/types module, make a dummy module if it can't be found
 begin
@@ -186,7 +187,7 @@ class MailFactory
 
     if(options[:date])
       if(get_header("Date").length == 0)
-        add_header("Date", Time.now.strftime("%a, %d %b %Y %H:%M:%S %z"))
+        add_header("Date", Time.now.rfc2822)
       end
     end
 
